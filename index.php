@@ -14,6 +14,20 @@ include __DIR__. "/genp.php"
 <body class="bg-dark">
     <div class="container">
         <h1 class="my-5 text-white">GENERA PASSWORD</h1>
+        <div>
+        <form class="form-control p-3" action="./index.php" method="GET">
+            <div>
+                <label>Lunghezza password:</label>
+                <input type="number" name="createPassword" min="0">
+            </div>
+            <button type="submit" class="btn btn-success mt-3">GENERA</button>
+        </form>
+        <?php if(isset($password)){ ?>
+            <p class="alert alert-success mt-4">
+                La tua nuova password é: <?= $password ?>
+            </p>
+        <?php } ?>
+    </div>
     </div>
 </body>
 </html>
